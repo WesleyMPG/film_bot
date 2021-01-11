@@ -1,24 +1,111 @@
 {
 	"description": {
 
-		"A": false,
-		"B": [true, "something"],
-		"C": true,
-		"D": [false, "other"],
-    "E": "",
-    "F": "",
-    "G": "",
-    "H": "",
-    "I": "",
-    "J": ""
+      "Drama": "Você gosta de filme de drama?",
+      "Comedia": "pergunta",
+      "FilmeComFamilia": ["", "pergunta"],
+      "ClassificacaoLivre": ["", "pergunta"],
+      "FilmeLeve": "",
+      "Fatansia": ["", "pergunta"],
+      "FilmeDramatico": "",
+      "FilmeFamiliar": "",
+      "HistoriaVeridica": ["", "pergunta"],
+      "FilmeEmocionante": "",
+      "Lista1": "",
+        
+      "Romance": ["", "pergunta"], 
+      "Emocao": "",
+      "ComediaEmocionante": "",
+      "ComAmigos": ["","Pergunta"],
+      "ClassificacaoModerada": ["","Pergunta"],
+      "Adultos": "",
+      "ComediaComAmigos": "",
+      "Lista2": "",
+      
+      "Acao": ["","pergunta"],
+      "FiccaoCientifica": ["","Pergunta"],
+      "Marvel": ["","Pergunta"],
+      "Dc": ["","Pergunta"],
+      "Hq": "",
+      "SuperHeroi": ["","Pergunta"],
+      "Geek": "",
+      "Aventura": ["","Pergunta"],
+      "Empolgante": "",
+      "FilmesDeHerois": "",
+      "FilmesDeAcaoEAventura": "",
+      "Lista3": "",
+      
+      "DesastresNaturais": ["","Pergunta"],
+      "FilmeDeSobrevivencia": "",
+      "AcaoEmocionante": "",
+      "AcaoComRomance": "",
+      "Guerra": ["","Pergunta"],
+      "AcaoDramatica": "",
+      "AcaoEGuerra": "",
+      "Lista4": "",
+      
+      "Terror": ["","Pergunta"],
+      "FilmeSozinho": ["","Pergunta"],
+      "FilmesDeTerror": "",
+      "Suspense": ["","Pergunta"],
+      "FilmesDeSuspense": "",
+      "FilmePesado": ["","Pergunta"],
+      "FilmeDeTerrorPesado": "",
+      "FilmeDeSuspensePesado": "",
+      "Lista5": "",
+      
+      "Espaco": ["","Pergunta"],
+      "ViagensEspaciais": "",
+      "VidaExtraterrestre": ["","Pergunta"],
+      "DramasNoEspaco": "",
+      "Alienigena": "",
+      "Lista6": ""
+      
+      
+      
+      
+
 	},
 
 	"rules": [
-    ["A and B and C", "H"],
-    ["(C and B) or G", "I"],
-		["A and B", "E"],
-		["E or B", "F"],
-		["J or E or !B", "G"]
+      ["FilmecomFamilia and ClassificacaoLivre", "FilmeLeve"],
+      ["Drama or Fatansia", "FilmeDramatico"],
+      ["FilmeLeve and Comedia", "FilmeFamiliar"],
+      ["FilmeDramatico and HistoriaVeridica", "FilmeEmocionante"],
+      ["FilmeFamiliar or FilmeEmocionante", "Lista1"],
+    
+      ["Romance or Drama", "Emocao"],
+      ["ComAmigos and ClassificacaoModerada", "Adultos"],
+      ["Comedia and Emocao", "ComediaEmocionante"],
+      ["Comedia and Adultos", "ComediaComAmigos"],
+      ["ComediaEmocionante or ComediaComAmigos", "Lista2"],
+      
+      ["Marvel or Dc", "Hq"],
+      ["SuperHeroi or Hq", "Geek"],
+      ["Aventura and FiccaoCientifica", "Empolgante"],
+      ["Geek and Comedia", "FilmesDeHerois"],
+      ["Acao and Empolgante", "FilmesDeAcaoEAventura"],
+      ["FilmesDeHerois or FilmesDeAcaoEAventura", "Lista3"],
+      
+      ["Drama and DesastresNaturais", "FilmeDeSobrevivencia"],
+      ["Acao and FilmesDeSobrevivencia", "AcaoEmocionante"],
+      ["Acao and Romance", "AcaoComRomance"],
+      ["AcaoEmocionante or AcaoComRomance", "AcaoDramatica"],
+      ["Acao and Guerra", "AcaoEGuerra"],
+      ["AcaoDramatica or AcaoEGuerra", "Lista4"],
+		
+      ["Terror and FilmeSozinho", "FilmeDeTerror"],
+      ["Suspense and FilmeSozinho", "FilmeDeSuspense"],
+      ["FilmesDeTerror and FilmePesado", "FilmeDeTerrorPesado"],
+      ["FilmesDeSuspense and FilmePesado", "FilmeDeSuspensePesado"],
+      ["FilmesDeTerrorPesado or FilmeDeSuspensePesado", "Lista5"],
+		
+      ["FiccaoCientifica and Espaco", "ViagensEspaciais"],
+      ["ViagensEspaciais or Drama", "DramasNoEspaco"],
+      ["Espaco and VidaExtraterrestre", "Alienigena"],
+      ["DramasNoEspaco or Alienigenas", "Lista6"]
+      
+      
 	]
 
 }
