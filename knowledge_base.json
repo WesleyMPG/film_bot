@@ -1,110 +1,106 @@
 {
 	"description": {
 
-      "Drama": "Você gosta de filme de drama?",
-      "Comedia": "pergunta",
-      "FilmeComFamilia": ["", "pergunta"],
-      "ClassificacaoLivre": ["", "pergunta"],
+      "Drama": "Você gosta de filme que tem um pouquinho de drama?",
+      "Comedia": "Você gosta de filme de comédia?",
+      "FilmeComFamilia": "Vai assistir esse filme com sua família?",
+      "ClassificacaoLivre": "A classificação de idade seria de LIVRE a 12 anos?",
       "FilmeLeve": "",
-      "Fatansia": ["", "pergunta"],
+      "Fatansia": "E sobre filme de fantasia...você gosta?",
       "FilmeDramatico": "",
       "FilmeFamiliar": "",
-      "HistoriaVeridica": ["", "pergunta"],
+      "HistoriaVeridica": "Você gosta de filmes que contam uma história verídica?",
       "FilmeEmocionante": "",
       "Lista1": "",
-        
-      "Romance": ["", "pergunta"], 
+      
+      "Romance": "Gosta de filmes com um pouco de romance no meio?", 
       "Emocao": "",
       "ComediaEmocionante": "",
-      "ComAmigos": ["","Pergunta"],
-      "ClassificacaoModerada": ["","Pergunta"],
+      "ComAmigos":"Vai assistir esse filme com amigos?",
+      "ClassificacaoModerada":"A classificaão de idade poderia ser de de 12 a 18 anos?",
       "Adultos": "",
       "ComediaComAmigos": "",
       "Lista2": "",
-      
-      "Acao": ["","pergunta"],
-      "FiccaoCientifica": ["","Pergunta"],
-      "Marvel": ["","Pergunta"],
-      "Dc": ["","Pergunta"],
+
+      "Acao":"Gosta de filmes de ação?",
+      "FiccaoCientifica":"O que acha de filmes do gênero Ficção Científica? Você Gosta?",
+      "Marvel":"Vamos ver se você é Geek....Gosta de Marvel?",
+      "Dc":"E que tal a DC, gosta?",
       "Hq": "",
-      "SuperHeroi": ["","Pergunta"],
+      "SuperHeroi":"Gosta de filmes com heróis?",
       "Geek": "",
-      "Aventura": ["","Pergunta"],
+      "Aventura":"O que acha de filmes com aventura? Você gosta?",
       "Empolgante": "",
       "FilmesDeHerois": "",
       "FilmesDeAcaoEAventura": "",
-      "Lista3": "",
-      
-      "DesastresNaturais": ["","Pergunta"],
-      "FilmeDeSobrevivencia": "",
+      "Lista3": "", 
+
+      "DesastresNaturais": "Gosta de filmes com desastres naturais?",
+      "FilmesDeSobrevivencia": "",
       "AcaoEmocionante": "",
       "AcaoComRomance": "",
-      "Guerra": ["","Pergunta"],
+      "Guerra": "E filmes de guerra? Você gosta?",
       "AcaoDramatica": "",
       "AcaoEGuerra": "",
       "Lista4": "",
-      
-      "Terror": ["","Pergunta"],
-      "FilmeSozinho": ["","Pergunta"],
+
+      "Terror": "Gosta de filmes de Terror?",
+      "FilmeSozinho": "Você vai assistir sozinho?",
       "FilmesDeTerror": "",
-      "Suspense": ["","Pergunta"],
+      "Suspense": "E filme de suspense...você gosta?",
       "FilmesDeSuspense": "",
-      "FilmePesado": ["","Pergunta"],
-      "FilmeDeTerrorPesado": "",
-      "FilmeDeSuspensePesado": "",
+      "FilmePesado": "A classificação pode ser de 18+?",
+      "FilmesDeTerrorPesado": "",
+      "FilmesDeSuspensePesado": "",
       "Lista5": "",
-      
-      "Espaco": ["","Pergunta"],
+
+      "Espaco": "O que acha de filmes que se passam no Espaço? Você gosta?",
       "ViagensEspaciais": "",
-      "VidaExtraterrestre": ["","Pergunta"],
+      "VidaExtraterrestre": "E que tal filmes com Alienígena....você gosta?",
       "DramasNoEspaco": "",
-      "Alienigena": "",
+      "Alienigenas": "",
       "Lista6": ""
-      
-      
-      
-      
 
 	},
 
 	"rules": [
-      ["FilmecomFamilia and ClassificacaoLivre", "FilmeLeve"],
-      ["Drama or Fatansia", "FilmeDramatico"],
-      ["FilmeLeve and Comedia", "FilmeFamiliar"],
-      ["FilmeDramatico and HistoriaVeridica", "FilmeEmocionante"],
-      ["FilmeFamiliar or FilmeEmocionante", "Lista1"],
-    
-      ["Romance or Drama", "Emocao"],
-      ["ComAmigos and ClassificacaoModerada", "Adultos"],
-      ["Comedia and Emocao", "ComediaEmocionante"],
-      ["Comedia and Adultos", "ComediaComAmigos"],
-      ["ComediaEmocionante or ComediaComAmigos", "Lista2"],
-      
-      ["Marvel or Dc", "Hq"],
+      ["ClassificacaoLivre and FilmeComFamilia", "FilmeLeve"],
+      ["Fatansia or Drama", "FilmeDramatico"],
+      ["Comedia and FilmeLeve", "FilmeFamiliar"],
+      ["HistoriaVeridica and FilmeDramatico ", "FilmeEmocionante"],
+      ["FilmeEmocionante  or  FilmeFamiliar", "Lista1"],
+
+      ["Drama or Romance ", "Emocao"],
+      ["ClassificacaoModerada and ComAmigos ", "Adultos"],
+      ["Emocao and Comedia ", "ComediaEmocionante"],
+      ["Adultos and Romance ", "ComediaComAmigos"],
+      ["ComediaComAmigos or ComediaEmocionante", "Lista2"],
+
+      ["Dc or Marvel", "Hq"],
       ["SuperHeroi or Hq", "Geek"],
       ["Aventura and FiccaoCientifica", "Empolgante"],
-      ["Geek and Comedia", "FilmesDeHerois"],
-      ["Acao and Empolgante", "FilmesDeAcaoEAventura"],
-      ["FilmesDeHerois or FilmesDeAcaoEAventura", "Lista3"],
-      
-      ["Drama and DesastresNaturais", "FilmeDeSobrevivencia"],
+      ["Comedia and Geek ", "FilmesDeHerois"],
+      ["Empolgante and Acao ", "FilmesDeAcaoEAventura"],
+      ["FilmesDeAcaoEAventura or FilmesDeHerois ", "Lista3"],
+
+      ["Drama and DesastresNaturais", "FilmesDeSobrevivencia"],
       ["Acao and FilmesDeSobrevivencia", "AcaoEmocionante"],
       ["Acao and Romance", "AcaoComRomance"],
-      ["AcaoEmocionante or AcaoComRomance", "AcaoDramatica"],
+      ["AcaoComRomance or AcaoEmocionante", "AcaoDramatica"],
       ["Acao and Guerra", "AcaoEGuerra"],
-      ["AcaoDramatica or AcaoEGuerra", "Lista4"],
+      ["AcaoEGuerra or AcaoDramatica ", "Lista4"],
 		
-      ["Terror and FilmeSozinho", "FilmeDeTerror"],
-      ["Suspense and FilmeSozinho", "FilmeDeSuspense"],
-      ["FilmesDeTerror and FilmePesado", "FilmeDeTerrorPesado"],
-      ["FilmesDeSuspense and FilmePesado", "FilmeDeSuspensePesado"],
-      ["FilmesDeTerrorPesado or FilmeDeSuspensePesado", "Lista5"],
+      ["Terror and FilmeSozinho", "FilmesDeTerror"],
+      ["Suspense and FilmeSozinho", "FilmesDeSuspense"],
+      ["FilmesDeTerror and FilmePesado", "FilmesDeTerrorPesado"],
+      ["FilmesDeSuspense and FilmePesado", "FilmesDeSuspensePesado"],
+      ["FilmesDeTerrorPesado or FilmesDeSuspensePesado", "Lista5"],
 		
       ["FiccaoCientifica and Espaco", "ViagensEspaciais"],
       ["ViagensEspaciais or Drama", "DramasNoEspaco"],
-      ["Espaco and VidaExtraterrestre", "Alienigena"],
+      ["Espaco and VidaExtraterrestre", "Alienigenas"],
       ["DramasNoEspaco or Alienigenas", "Lista6"]
-      
+  
       
 	]
 
