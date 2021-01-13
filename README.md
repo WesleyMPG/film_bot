@@ -8,22 +8,25 @@ Para clonar o projeto:
 # Descrição
 O projeto é composto de um motor de inferência que está num repositório separado com a finalidade de uma possível futura reutilização em outros projetos.
 A base de dados é passada através de um arquivo json, no seguinte formato:
-json
-{
-	"description": {
-		"A": "",
-		"B": "It's raining?",
-		"C": "", 
-		"D": "",
-		"E": "",
-		"F": ""
-	},
-	"rules": [
-		["A and C", "E"],
-		["B or !D", "A"],
-		["C and (!B or D)", "F"]
-	]
-}
+
+
+    json
+	{
+		"description": {
+			"A": "",
+			"B": "It's raining?",
+			"C": "", 
+			"D": "",
+			"E": "",
+			"F": ""
+		},
+		"rules": [
+			["A and C", "E"],
+			["B or !D", "A"],
+			["C and (!B or D)", "F"]
+		]
+	}
+
 
 Cada variável é declarada na seção "description" juntamente com uma string descritiva, que nesse caso se trata da pergunta relacionada à mesma e em seguida tem-se a seção "rules" onde são especificadas as regras. Nessa seção à esquerda está a regra propriamente dita e à direita  está a "consequência".
 
