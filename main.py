@@ -37,7 +37,7 @@ print('---------------------------------------------------------------------')
 
 def main():
     result, confidence = eng.evaluate('Lista1')
-    if(result == True):
+    if(result == True and confidence >= 60):
         print('---------------------------------------------------------------------')
         print('PREPARAMOS UMA LISTA COM FILMES SELECIONADOS PARA VOCÊ ASSISTIR HOJE!')
         print('ACESSE ESSE LINK E CONFIRA --> https://cutt.ly/recomendacao_de_filmes_0l100')
@@ -46,7 +46,7 @@ def main():
         print('CÓDIGO DA OPERAÇÃO: L01')
         return
     result, confidence = eng.evaluate('Lista2')
-    if(result == True):
+    if(result == True and confidence >= 60):
         print('---------------------------------------------------------------------')
         print('PREPARAMOS UMA LISTA COM FILMES SELECIONADOS PARA VOCÊ ASSISTIR HOJE!')
         print('ACESSE ESSE LINK E CONFIRA --> https://cutt.ly/recomendacao_de_filmes_0l200')
@@ -55,7 +55,7 @@ def main():
         print('CÓDIGO DA OPERAÇÃO: L02')
         return
     result, confidence = eng.evaluate('Lista3')
-    if(result == True):
+    if(result == True and confidence >= 60):
         print('---------------------------------------------------------------------')
         print('PREPARAMOS UMA LISTA COM FILMES SELECIONADOS PARA VOCÊ ASSISTIR HOJE!')
         print('ACESSE ESSE LINK E CONFIRA --> https://cutt.ly/recomendacao_de_filmes_0l300')
@@ -64,7 +64,7 @@ def main():
         print('CÓDIGO DA OPERAÇÃO: L03')
         return
     result, confidence = eng.evaluate('Lista4')
-    if(result == True):
+    if(result == True and confidence >= 60):
         print('---------------------------------------------------------------------')
         print('PREPARAMOS UMA LISTA COM FILMES SELECIONADOS PARA VOCÊ ASSISTIR HOJE!')
         print('ACESSE ESSE LINK E CONFIRA --> https://cutt.ly/recomendacao_de_filmes_0l400')
@@ -73,7 +73,7 @@ def main():
         print('CÓDIGO DA OPERAÇÃO: L04')
         return
     result, confidence = eng.evaluate('Lista5')
-    if(result == True):
+    if(result == True and confidence >= 60):
         print('---------------------------------------------------------------------')
         print('PREPARAMOS UMA LISTA COM FILMES SELECIONADOS PARA VOCÊ ASSISTIR HOJE!')
         print('ACESSE ESSE LINK E CONFIRA --> https://cutt.ly/recomendacao_de_filmes_0l500')
@@ -82,7 +82,7 @@ def main():
         print('CÓDIGO DA OPERAÇÃO: L05')
         return
     result, confidence = eng.evaluate('Lista6')
-    if(result == True):
+    if(result == True and confidence >= 60):
         print('---------------------------------------------------------------------')
         print('PREPARAMOS UMA LISTA COM FILMES SELECIONADOS PARA VOCÊ ASSISTIR HOJE!')
         print('ACESSE ESSE LINK E CONFIRA --> https://cutt.ly/recomendacao_de_filmes_0l600')
